@@ -8,6 +8,8 @@ const { compilerOptions } = require('./tsconfig')
 
 module.exports = {
   preset: 'ts-jest',
+  // setupFilesAfterEnv: ['./src/tests/jest-setup.ts'],
+  testEnvironment: "jsdom",
   // moduleDirectories: ['node_modules', 'src'],
   // "moduleNameMapper": {
   //   "@/(.*)": "<rootDir>/src/$1"
