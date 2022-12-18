@@ -1,3 +1,6 @@
+// jest.config.js
+const { pathsToModuleNameMapper } = require('ts-jest/utils')
+const { compilerOptions } = require('./tsconfig')
 /*
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
@@ -5,6 +8,13 @@
 
 module.exports = {
   preset: 'ts-jest',
+  // moduleDirectories: ['node_modules', 'src'],
+  // "moduleNameMapper": {
+  //   "@/(.*)": "<rootDir>/src/$1"
+  // },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: "<rootDir>/",
+  }),
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
