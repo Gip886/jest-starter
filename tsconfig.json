@@ -18,7 +18,8 @@
     "module": "commonjs",
     "types": [
       "node",
-      "jest"
+      "jest",
+      "@testing-library/jest-dom"
     ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
