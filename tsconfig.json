@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "target": "es2016",
     "baseUrl": "./",
     "paths": {
@@ -8,7 +9,11 @@
       ],
       "@/*": [
         "src/*"
-      ]
+      ],
+      "components/*": ["src/components/*"],
+      "apis/*": ["src/apis/*"],
+      "hooks/*": ["src/hooks/*"],
+      "store/*": ["src/store/*"]
     },
     "module": "commonjs",
     "types": [
